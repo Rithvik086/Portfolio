@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of Rithvik, showcasing blog posts, projects, and more.">
-  <title>Rithvik - Personal Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Rithvik, showcasing blog posts, projects, and more.">
+    <title>Rithvik - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light-mode">
-  <header>
-    <nav>
-      <h1>Rithvik Rao</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>   <button id="theme-toggle"> Toogle Dark mode</button>
-   
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <h1>Rithvik Rao</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm [Your Name], a [Your Role] with a passion for [Your Interests].</p>
-  </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Rithvik, a software developer with a passion for building innovative web applications and solving complex problems.</p>
+        </section>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="post">
-      <h3><a href="#">Blog Post Title 1</a></h3>
-      <p>A short description of your blog post...</p>
-    </div>
-    <div class="post">
-      <h3><a href="#">Blog Post Title 2</a></h3>
-      <p>A short description of your second blog post...</p>
-    </div>
-  </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Blog Post Title 1</h3>
+                    <p>A short description of your blog post...</p>
+                </article>
+                <article class="card">
+                    <h3>Blog Post Title 2</h3>
+                    <p>A short description of your second blog post...</p>
+                </article>
+            </div>
+        </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3><a href="#">Project 1</a></h3>
-      <p>Short description of the project...</p>
-    </div>
-    <div class="project">
-      <h3><a href="#">Project 2</a></h3>
-      <p>Short description of another project...</p>
-    </div>
-  </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Project 1</h3>
+                    <p>Short description of the project...</p>
+                </article>
+                <article class="card">
+                    <h3>Project 2</h3>
+                    <p>Short description of another project...</p>
+                </article>
+            </div>
+        </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  </section>
+        <section id="contact">
+            <h2>Connect with me</h2>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/in/rithvik-rao-8600882a2/" class="social-button linkedin" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Rithvik086" class="social-button github" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="mailto:rithvikrao2005@gmail.com" class="social-button gmail">
+                    <i class="fas fa-envelope"></i>
+                    Gmail
+                </a>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; Rithvik Rao, <span id="current-year"></span></p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
