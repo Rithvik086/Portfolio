@@ -340,6 +340,253 @@ footer {
   color: white;
 }
 
+/* Blog Grid Styles */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.light-mode .blog-card {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .blog-card {
+  background: rgba(45, 55, 72, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.blog-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.read-more {
+  display: inline-block;
+  color: #4299e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateX(5px);
+}
+
+/* Category styles */
+.category {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  background: rgba(66, 153, 225, 0.1);
+  color: #4299e1;
+}
+
+.dark-mode .category {
+  background: rgba(66, 153, 225, 0.2);
+}
+
+
+/* Blog Post Styles */
+.blog-post {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.light-mode .blog-post {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .blog-post {
+  background: rgba(45, 55, 72, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(66, 153, 225, 0.2);
+}
+
+.blog-post-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(120deg, #4299e1, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-post-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.blog-post-meta i {
+  margin-right: 0.5rem;
+}
+
+.blog-post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.blog-post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-content img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+.blog-post-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(66, 153, 225, 0.2);
+}
+
+.blog-post-tags {
+  margin-bottom: 2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 2rem;
+  background: rgba(66, 153, 225, 0.1);
+  color: #4299e1;
+  font-size: 0.9rem;
+}
+
+.dark-mode .tag {
+  background: rgba(66, 153, 225, 0.2);
+}
+
+.blog-post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.prev-post,
+.next-post {
+  color: #4299e1;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.prev-post:hover {
+  transform: translateX(-5px);
+}
+
+.next-post:hover {
+  transform: translateX(5px);
+}
+
+.blog-post-share {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.blog-post-share h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.share-button:hover {
+  transform: translateY(-3px);
+}
+
+.share-button.twitter {
+  background: #1DA1F2;
+}
+
+.share-button.linkedin {
+  background: #0077B5;
+}
+
+.share-button.facebook {
+  background: #1877F2;
+}
+
+/* Code block styling */
+.blog-post-content pre {
+  background: rgba(45, 55, 72, 0.05);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.dark-mode .blog-post-content pre {
+  background: rgba(45, 55, 72, 0.5);
+}
+
+/* Blockquote styling */
+.blog-post-content blockquote {
+  border-left: 4px solid #4299e1;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: inherit;
+}
+
 
 
 /* Animations */
