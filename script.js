@@ -125,3 +125,108 @@ function updateNavigation(currentId) {
 
 // Initialize blog functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadBlogPost);
+
+
+// Add this to script.js
+
+// Project data - In a real application, this would come from a backend
+const projects = {
+    1: {
+        title: "Project 1",
+        description: "A detailed description of your first project. This can be a few sentences long to give readers a good idea of what the project is about...",
+        technologies: ["React", "Node.js", "MongoDB"],
+        category: "Web Development",
+        image: "/api/placeholder/400/300",
+        demoLink: "https://project1-demo.com",
+        githubLink: "https://github.com/username/project1",
+        date: "April 2024"
+    },
+    2: {
+        title: "Project 2",
+        description: "A detailed description of your second project. This can be a few sentences long to give readers a good idea of what the project is about...",
+        technologies: ["Python", "TensorFlow", "AWS"],
+        category: "Machine Learning",
+        image: "/api/placeholder/400/300",
+        demoLink: "https://project2-demo.com",
+        githubLink: "https://github.com/username/project2",
+        date: "March 2024"
+    },
+    3: {
+        title: "Project 3",
+        description: "A detailed description of your third project. This can be a few sentences long to give readers a good idea of what the project is about...",
+        technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+        category: "Frontend Development",
+        image: "/api/placeholder/400/300",
+        demoLink: "https://project3-demo.com",
+        githubLink: "https://github.com/username/project3",
+        date: "February 2024"
+    },
+    4: {
+        title: "Project 4",
+        description: "A detailed description of your fourth project. This can be a few sentences long to give readers a good idea of what the project is about...",
+        technologies: ["Flutter", "Firebase", "Dart"],
+        category: "Mobile Development",
+        image: "/api/placeholder/400/300",
+        demoLink: "https://project4-demo.com",
+        githubLink: "https://github.com/username/project4",
+        date: "January 2024"
+    }
+};
+
+// Function to load project details
+function loadProject() {
+    // Only run on project page
+    if (!window.location.pathname.includes('project.html')) return;
+
+    // Get project ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+    
+    // Get project data
+    const project = projects[projectId];
+    
+    // If project exists, update the page content
+    if (project) {
+        document.querySelector('.project-title').textContent = project.title;
+        
+        // Update metadata
+        const metaElement = document.querySelector('.project-meta');
+        metaElement.innerHTML = `
+            <span class="date">${project.date}</span>
+            <span class="category">${project.category}</span>
+        `;
+        
+        // Update content
+        document.querySelector('.project-content').innerHTML = `
+            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <p>${project.description}</p>
+        `;
+        
+        // Update technologies
+        const techContainer = document.querySelector('.project-technologies');
+        techContainer.innerHTML = project.technologies.map(tech => `
+            <span class="tag">${tech}</span>
+        `).join('');
+        
+        // Update links
+        document.querySelector('.project-links').innerHTML = `
+            <a href="${project.demoLink}" target="_blank" rel="noopener noreferrer" class="demo-link">Live Demo</a>
+            <a href="${project.githubLink}" target="_blank" rel="noopener noreferrer" class="github-link">View on GitHub</a>
+        `;
+    } else {
+        // Handle 404
+        document.querySelector('main').innerHTML = `
+            <div class="project">
+                <h1>404 - Project Not Found</h1>
+                <p>Sorry, the project you're looking for doesn't exist.</p>
+                <a href="index.html#projects">← Back to Projects</a>
+            </div>
+        `;
+    }
+}
+
+// Initialize project functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    loadBlogPost();
+    loadProject();
+});
