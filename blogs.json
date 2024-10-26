@@ -1,0 +1,36 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Blog Post Title 1",
+            "date": "April 20, 2024",
+            "category": "Development",
+            "description": "A brief description of the first blog post.",
+            "content": "<p>This is the detailed content of the first blog post...</p>"
+        },
+        {
+            "id": 2,
+            "title": "Blog Post Title 2",
+            "date": "April 18, 2024",
+            "category": "Technology",
+            "description": "A brief description of the second blog post.",
+            "content": "<p>This is the detailed content of the second blog post...</p>"
+        },
+        {
+            "id": 3,
+            "title": "Blog Post Title 3",
+            "date": "April 15, 2024",
+            "category": "Web Design",
+            "description": "A brief description of the third blog post.",
+            "content": "<p>This is the detailed content of the third blog post...</p>"
+        },
+        {
+            "id": 4,
+            "title": "Blog Post Title 17",
+            "date": "April 10, 2024",
+            "category": "Programming",
+            "description": "A brief description of the fourth blog post.",
+            "content": "<p>This is the detailed content of the fourth blog post...</p>"
+        }
+    ]
+}
