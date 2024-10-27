@@ -2,19 +2,23 @@
     "posts": [
         {
             "id": 1,
-            "title": "Blog Post Title 1",
-            "date": "April 20, 2024",
-            "category": "Development",
-            "description": "A brief description of the first blog post.",
-            "content": "<p>This is the detailed content of the first blog post...</p>"
-        },
+            "title": "Is India’s Home Dominance in Test Fading?",
+            "date": "October 27, 2024",
+            "category": "Sports",
+            "description": "Exploring recent challenges to India's dominance in home Test cricket.",
+            "content": "<p>India's dominance in home Test cricket is facing challenges. With recent wins by Australia, England, and strong performances from New Zealand, it seemed a series loss was inevitable—and it finally happened in the New Zealand series. This shift suggests that India’s supremacy at home is no longer guaranteed.</p><p>Historically, India’s spin-friendly pitches and experienced lineup made it nearly unbeatable at home. However, recent setbacks reveal several key issues:</p><ul><li><b>Adaptable Opponents:</b> Visiting teams now arrive more prepared and adjust their strategies to counter India’s spin advantage.</li><li><b>Decline in Trust and Confidence:</b> India’s approach to preparing overly slow pitches, like the one in Pune, showed a lack of confidence in their own spinners. This move allowed opponents like Mitchell Santner to thrive while diminishing the effectiveness of seasoned spinners like Ashwin and Jadeja, who were unable to leverage their usual impact.</li><li><b>Transitioning Squad:</b> India is in a transitional phase, with newer players stepping in, impacting consistency. The absence of seasoned domestic players like Cheteshwar Pujara and Ajinkya Rahane in the middle order is felt, as their experience in handling difficult situations is unmatched. Furthermore, the always attacking mindset of new players often backfires, proving that in Test cricket, patience and strategic play are equally important.</li><li><b>Heavy Dependence:</b> India relies heavily on key players like Ashwin and Jadeja, which makes the team vulnerable when they are countered effectively.</li><li><b>Lack of Successors for Key Players:</b><p> While India can find replacements for players like Ishant Sharma, Umesh Yadav, and even Virat Kohli, the team has yet to identify any clear successors for Ravichandran Ashwin and Ravindra Jadeja. Both spinners have been instrumental in maintaining India's 12-year unbeaten home record, and their absence would leave a significant void that new players have yet to fill.</li></ul><p>While India’s dominance may not be over, these recent challenges signal a need for recalibration, both in terms of squad development and strategy. Without confidence in their spinners and a clear pitch strategy, India risks losing its stronghold at home.</p>",
+            "tags": ["India", "Sports", "Cricket"]
+        }
+        
+        ,
         {
             "id": 2,
             "title": "Blog Post Title 2",
             "date": "April 18, 2024",
             "category": "Technology",
             "description": "A brief description of the second blog post.",
-            "content": "<p>This is the detailed content of the second blog post...</p>"
+            "content": "<p>This is the detailed content of the second blog post...</p>",
+            "tags": ["Python", "Machine Learning", "Data Science"]
         },
         {
             "id": 3,
@@ -22,7 +26,8 @@
             "date": "April 15, 2024",
             "category": "Web Design",
             "description": "A brief description of the third blog post.",
-            "content": "<p>This is the detailed content of the third blog post...</p>"
+            "content": "<p>This is the detailed content of the third blog post...</p>",
+            "tags": ["CSS", "UI Design", "Responsive Design"]
         },
         {
             "id": 4,
@@ -30,7 +35,8 @@
             "date": "April 10, 2024",
             "category": "Programming",
             "description": "A brief description of the fourth blog post.",
-            "content": "<p>This is the detailed content of the fourth blog post...</p>"
+            "content": "<p>This is the detailed content of the fourth blog post...</p>",
+            "tags": ["React", "JavaScript", "Frontend"]
         },
         {
             "id": 5,
@@ -38,7 +44,8 @@
             "date": "April 10, 2024",
             "category": "Programming",
             "description": "A brief description of the fourth blog post.",
-            "content": "<p>This is the detailed content of the fourth blog post...</p>"
+            "content": "<p>This is the detailed content of the fourth blog post...</p>",
+            "tags": ["NodeJS", "Backend", "API Development"]
         }
     ]
 }

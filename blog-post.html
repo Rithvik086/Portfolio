@@ -10,7 +10,7 @@
 <body class="light-mode">
     <header>
         <nav>
-            <h1>Rithvik Rao</h1>
+            <a href="index.html"><h1>Rithvik Rao</h1></a> 
             <ul>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="blogs.html">Blog</a></li>
@@ -23,14 +23,14 @@
 
     <main>
         <article class="blog-post">
-            <header class="blog-post-header">
-                <h1 class="blog-post-title">Blog Post Title</h1>
+            <div class="blog-post-header">
+                <!-- Remove the hardcoded h1 and replace with an empty one -->
+                <h1 id="blog-post-title" class="blog-post-title"></h1>
                 <div class="blog-post-meta">
-                    <span class="date"><i class="far fa-calendar"></i> April 20, 2024</span>
-                    <span class="category"><i class="far fa-folder"></i> Development</span>
-                    <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+                    <span class="date"></span>
+                    <span class="category"></span>
                 </div>
-            </header>
+            </div>
 
             <div class="blog-post-content">
                 <p>Your blog post content goes here...</p>
@@ -63,6 +63,7 @@
     <footer>
         © Rithvik Rao, <span id="current-year"></span>
     </footer>
+    <script type="module" src="blogHandler.js"></script>
     
     <script src="script.js"></script>
 </body>

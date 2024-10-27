@@ -26,64 +26,6 @@ function updateThemeIcon(isDarkMode) {
         : '<i class="fas fa-moon"></i>';
 }
 
-// Function to load all blog posts on the listing page
-async function loadBlogPosts() {
-    if (!window.location.pathname.includes('blogs.html')) return;
-
-    try {
-        const response = await fetch('blogs.json');
-        const data = await response.json();
-        
-        const blogGrid = document.getElementById('blog-grid');
-        blogGrid.innerHTML = ''; // Clear existing content
-
-        data.posts.forEach(post => {
-            const postCard = document.createElement('div');
-            postCard.className = 'blog-card';
-            postCard.innerHTML = `
-                <h3>${post.title}</h3>
-                <div class="blog-meta">
-                    <span class="date">${post.date}</span>
-                    <span class="category">${post.category}</span>
-                </div>
-                <p>${post.description}</p>
-                <a href="blog-post.html?id=${post.id}" class="read-more">Read More →</a>
-            `;
-            blogGrid.appendChild(postCard);
-        });
-    } catch (error) {
-        console.error('Error loading blog posts:', error);
-    }
-}
-
-// Function to load a specific blog post
-async function loadBlogPost() {
-    if (!window.location.pathname.includes('blog-post.html')) return;
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
-
-    try {
-        const response = await fetch('blogs.json');
-        const data = await response.json();
-
-        const post = data.posts.find(blog => blog.id === parseInt(postId));
-        if (post) {
-            document.querySelector('.blog-post-title').textContent = post.title;
-            const metaElement = document.querySelector('.blog-post-meta');
-            metaElement.innerHTML = `<span class="date">${post.date}</span><span class="category">${post.category}</span>`;
-            document.querySelector('.blog-post-content').innerHTML = post.content.replace(/\n/g, '<br>');
-            const tagsContainer = document.querySelector('.blog-post-tags');
-            tagsContainer.innerHTML = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-            updateNavigation(parseInt(postId), data.posts.length);
-        } else {
-            document.querySelector('main').innerHTML = `<div class="blog-post"><h1>404 - Post Not Found</h1><p>Sorry, the blog post you're looking for doesn't exist.</p><a href="blogs.html">← Back to Blog List</a></div>`;
-        }
-    } catch (error) {
-        console.error("Error loading blog post:", error);
-    }
-}
-
 // Function to load project details
 async function loadProject() {
     if (!window.location.pathname.includes('project.html')) return;
@@ -112,19 +54,7 @@ async function loadProject() {
     }
 }
 
-// Function to update navigation links
-function updateNavigation(currentId, maxId) {
-    const nav = document.querySelector('.blog-post-navigation');
-    if (!nav) return;
-    nav.innerHTML = `
-        ${currentId > 1 ? `<a href="blog-post.html?id=${currentId - 1}" class="prev-post">← Previous Post</a>` : '<span></span>'}
-        ${currentId < maxId ? `<a href="blog-post.html?id=${currentId + 1}" class="next-post">Next Post →</a>` : '<span></span>'}
-    `;
-}
-
 // Initialize functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    loadBlogPosts();
-    loadBlogPost();
     loadProject();
 });

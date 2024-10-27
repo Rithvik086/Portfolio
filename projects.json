@@ -1,0 +1,37 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Portfolio Website",
+            "date": "2024-01-15",
+            "status": "Completed",
+            "description": "A modern portfolio website built with HTML, CSS, and JavaScript",
+            "content": "<p>This portfolio website showcases my projects and skills using modern web technologies. It features a responsive design, dark/light mode toggle, and dynamic content loading.</p><h3>Key Features:</h3><ul><li>Responsive design for all devices</li><li>Dark/light mode support</li><li>Dynamic project loading</li><li>SEO optimized</li></ul>",
+            "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+            "githubUrl": "https://github.com/username/portfolio",
+            "liveUrl": "https://your-portfolio.com"
+        },
+        {
+            "id": 2,
+            "title": "Task Manager App",
+            "date": "2024-02-01",
+            "status": "In Progress",
+            "description": "A full-stack task management application with real-time updates",
+            "content": "<p>A comprehensive task management solution that helps users organize their work efficiently. Built with React for the frontend and Node.js for the backend.</p><h3>Features:</h3><ul><li>Real-time updates</li><li>Task categorization</li><li>Priority levels</li><li>Due date tracking</li></ul>",
+            "technologies": ["React", "Node.js", "MongoDB", "WebSocket"],
+            "githubUrl": "https://github.com/username/task-manager",
+            "liveUrl": "https://task-manager-demo.com"
+        },
+        {
+            "id": 3,
+            "title": "Task Manager pp",
+            "date": "2024-02-01",
+            "status": "In Progress",
+            "description": "A full-stack task management application with real-time updates",
+            "content": "<p>A comprehensive task management solution that helps users organize their work efficiently. Built with React for the frontend and Node.js for the backend.</p><h3>Features:</h3><ul><li>Real-time updates</li><li>Task categorization</li><li>Priority levels</li><li>Due date tracking</li></ul>",
+            "technologies": ["React", "Node.js", "MongoDB", "WebSocket"],
+            "githubUrl": "https://github.com/username/task-manager",
+            "liveUrl": "https://task-manager-demo.com"
+        }
+    ]
+}
