@@ -880,7 +880,121 @@
   background: var(--dark-tech-bg);
   color: var(--dark-tech-text);
 }
-  
+
+/* About Me Section - Light Mode */
+.about-me {
+  width: 100%; /* Full width within container */
+  max-width: 1200px; /* Matches main content width */
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-me-image {
+  margin-bottom: 1.5rem;
+}
+
+.about-me-image img {
+  max-width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.stat {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat h3 {
+  color: #4299e1;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Adds space between icon and text */
+}
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #4299e1;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+
+
+.btn:hover {
+  background-color: #3182ce;
+}
+
+/* About Me Section - Dark Mode */
+.dark-mode .about-me {
+  background-color: #2d3748;
+  color: #f7fafc;
+}
+
+.dark-mode .about-me-image img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .stat {
+  background-color: #4a5568;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .stat h3 {
+  color: #63b3ed;
+}
+
+.dark-mode .btn {
+  background-color: #63b3ed;
+}
+
+.dark-mode .btn:hover {
+  background-color: #4299e1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .about-me-image {
+    margin-bottom: 1rem;
+  }
+  .about-me-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .stat h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
   
   /* Animations */
   @keyframes gradientLight {
