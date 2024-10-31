@@ -2,36 +2,54 @@
     "projects": [
         {
             "id": 1,
-            "title": "Portfolio Website",
-            "date": "2024-01-15",
-            "status": "Completed",
-            "description": "A modern portfolio website built with HTML, CSS, and JavaScript",
-            "content": "<p>This portfolio website showcases my projects and skills using modern web technologies. It features a responsive design, dark/light mode toggle, and dynamic content loading.</p><h3>Key Features:</h3><ul><li>Responsive design for all devices</li><li>Dark/light mode support</li><li>Dynamic project loading</li><li>SEO optimized</li></ul>",
-            "technologies": ["HTML", "CSS", "JavaScript", "Responsive Design"],
-            "githubUrl": "https://github.com/username/portfolio",
-            "liveUrl": "https://your-portfolio.com"
-        },
-        {
-            "id": 2,
-            "title": "Task Manager App",
-            "date": "2024-02-01",
-            "status": "In Progress",
-            "description": "A full-stack task management application with real-time updates",
-            "content": "<p>A comprehensive task management solution that helps users organize their work efficiently. Built with React for the frontend and Node.js for the backend.</p><h3>Features:</h3><ul><li>Real-time updates</li><li>Task categorization</li><li>Priority levels</li><li>Due date tracking</li></ul>",
-            "technologies": ["React", "Node.js", "MongoDB", "WebSocket"],
-            "githubUrl": "https://github.com/username/task-manager",
-            "liveUrl": "https://task-manager-demo.com"
-        },
+            "title": "UniVerse App",
+            "date": "2024-10-31",
+            "status": "In Development",
+            "description": "An all-in-one platform for IIITS students, providing centralized access to subject materials and reference books.",
+            "content": "<p>UniVerse is an innovative application designed to serve as a central hub for IIITS students, consolidating subject materials, reference books, and additional resources in one convenient location. Built using Kotlin, the app leverages Firebase for real-time data management, ensuring users always have access to the latest materials. The integration of Jetpack libraries enhances the app’s architecture, delivering a responsive and intuitive user experience.</p><h3>Key Features:</h3><ul><li>Unified platform for academic resources</li><li>Real-time data synchronization</li><li>Optimized user experience with Jetpack libraries</li></ul>",
+            "technologies": ["Kotlin", "Firebase", "Jetpack"],
+            "githubUrl": "https://github.com/Rithvik086/UniVerse.git",
+            "liveUrl": "https://universe-demo.com"
+        }
+        
+        
+        ,
         {
             "id": 3,
-            "title": "Task Manager pp",
-            "date": "2024-02-01",
-            "status": "In Progress",
-            "description": "A full-stack task management application with real-time updates",
-            "content": "<p>A comprehensive task management solution that helps users organize their work efficiently. Built with React for the frontend and Node.js for the backend.</p><h3>Features:</h3><ul><li>Real-time updates</li><li>Task categorization</li><li>Priority levels</li><li>Due date tracking</li></ul>",
-            "technologies": ["React", "Node.js", "MongoDB", "WebSocket"],
-            "githubUrl": "https://github.com/username/task-manager",
-            "liveUrl": "https://task-manager-demo.com"
+            "title": "Movie Recommendation App",
+            "date": "2024-05-01",
+            "status": "Completed",
+            "description": "A movie recommendation app that helps users discover trending and popular films.",
+            "content": "<p>This app, developed in Java using Android Studio and Retrofit, integrates with the TMDB API to provide users with popular movie recommendations. The intuitive interface allows users to easily browse trending movies and view detailed information, making it easy to find recommendations when unsure of what to watch.</p><h3>Key Features:</h3><ul><li>Displays popular movies using TMDB API</li><li>Easy-to-navigate interface for quick recommendations</li><li>Detailed movie information for each selection</li><li>Enhanced user experience with smooth browsing</li></ul>",
+            "technologies": ["Java", "Android Studio", "Retrofit", "TMDB API"],
+            "githubUrl": "https://github.com/username/movie-recommendation-app",
+            "liveUrl": "https://movie-rec-demo.com"
         }
+        ,
+        {
+            "id": 2,
+            "title": "Note-Taking App",
+            "date": "2024-10-31",
+            "status": "Completed",
+            "description": "A feature-rich note-taking app built with Kotlin, optimized for performance and user experience.",
+            "content": "<p>This note-taking app is developed in Kotlin, featuring a user-friendly interface and efficient data storage using Room Database. The app provides seamless transitions between screens with Jetpack Navigation, focusing on performance and reliability.</p><h3>Key Features:</h3><ul><li>Note creation, editing, and deletion</li><li>Efficient data storage with Room Database</li><li>Smooth navigation using Jetpack Navigation</li><li>Optimized performance and reliability</li></ul>",
+            "technologies": ["Kotlin", "Room Database", "Jetpack Navigation"],
+            "githubUrl": "https://github.com/username/note-taking-app",
+            "liveUrl": "https://note-taking-demo.com"
+        },
+        {
+            "id": 4,
+            "title": "Dice Roller App",
+            "date": "2024-02-11",
+            "status": "Completed",
+            "description": "A simple, interactive app for simulating dice rolls.",
+            "content": "Nothing Special About This. It was My first Complete App That solved a Real Life Problem",
+            "technologies": ["Java", "Android Studio"],
+            "githubUrl": "https://github.com/username/dice-roller-app",
+            "liveUrl": "https://dice-roller-demo.com"
+        }
+        
+        
+        
     ]
 }
