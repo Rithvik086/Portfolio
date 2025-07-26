@@ -2,20 +2,46 @@
     "projects": [
         {
             "id": 1,
+            "title": "ArtisanSpace",
+            "date": "2025-03-01",
+            "status": "Completed",
+            "description": "A full-stack e-commerce platform for handicraft artisans to showcase products and connect with customers.",
+            "content": "<p>ArtisanSpace is an e-commerce platform designed to empower handicraft artisans by giving them a digital storefront. The app includes authentication with OTP-based password resets, role-based access (Admin, Customer, Artisan, Manager), and modules for inventory, user management, and personalized orders. Workshops can be booked for direct interactions, and full data consistency is maintained with cascading deletions. The platform was developed collaboratively using GitHub workflows.</p><h3>Key Features:</h3><ul><li>Role-based access with OTP authentication</li><li>Inventory and user management</li><li>Workshop booking and custom order modules</li><li>Automated data consistency via cascading deletions</li></ul>",
+            "technologies": ["MongoDB", "Express", "JavaScript", "Node.js", "EJS", "GitHub"],
+            "githubUrl": "",
+            "liveUrl": "https://artisanspace.onrender.com/"
+        },
+
+
+
+
+        {
+            "id": 2,
             "title": "UniVerse App",
             "date": "2024-10-31",
-            "status": "In Development",
+            "status": "V1 released",
             "description": "An all-in-one platform for IIITS students, providing centralized access to subject materials and reference books.",
             "content": "<p>UniVerse is an innovative application designed to serve as a central hub for IIITS students, consolidating subject materials, reference books, and additional resources in one convenient location. Built using Kotlin, the app leverages Firebase for real-time data management, ensuring users always have access to the latest materials. The integration of Jetpack libraries enhances the app’s architecture, delivering a responsive and intuitive user experience.</p><h3>Key Features:</h3><ul><li>Unified platform for academic resources</li><li>Real-time data synchronization</li><li>Optimized user experience with Jetpack libraries</li></ul>",
             "technologies": ["Kotlin", "Firebase", "Jetpack"],
             "githubUrl": "https://github.com/Rithvik086/UniVerse.git",
-            "liveUrl": "https://universe-demo.com"
-        }
+            "liveUrl": "https://github.com/Rithvik086/UniVerse.git"
+        },
         
         
-        ,
         {
             "id": 3,
+            "title": "CollabSphere",
+            "date": "2025-07-01",
+            "status": "In-progress",
+            "description": "A collaboration platform for developers, designers, and creators to post projects and form teams.",
+            "content": "<p>CollabSphere is a dynamic collaboration platform where users can post projects, define roles (UI/UX, AI, Backend, etc.), set deadlines, and track commitments. It features user profiles showcasing skills, ongoing/completed projects, and availability. Team formation workflows, real-time updates on open roles, and admin dashboards for analytics and moderation are core parts of the system.</p><h3>Key Features:</h3><ul><li>Project postings with defined roles and timelines</li><li>Dynamic user profiles and availability indicators</li><li>Role-based access and admin moderation tools</li><li>Real-time updates and team tracking</li></ul>",
+            "technologies": ["React", "Express", "MongoDB", "JavaScript"],
+            "githubUrl": "",
+            "liveUrl": ""
+        },
+
+        {
+            "id": 4,
             "title": "Movie Recommendation App",
             "date": "2024-05-01",
             "status": "Completed",
@@ -27,7 +53,7 @@
         }
         ,
         {
-            "id": 2,
+            "id": 5,
             "title": "Note-Taking App",
             "date": "2024-10-31",
             "status": "Completed",
@@ -38,7 +64,7 @@
             "liveUrl": "https://note-taking-demo.com"
         },
         {
-            "id": 4,
+            "id": 6,
             "title": "Dice Roller App",
             "date": "2024-02-11",
             "status": "Completed",
