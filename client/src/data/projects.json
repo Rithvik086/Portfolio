@@ -8,8 +8,8 @@
             "description": "A full-stack e-commerce platform for handicraft artisans to showcase products and connect with customers.",
             "content": "<p>ArtisanSpace is an e-commerce platform designed to empower handicraft artisans by giving them a digital storefront. The app includes authentication with OTP-based password resets, role-based access (Admin, Customer, Artisan, Manager), and modules for inventory, user management, and personalized orders. Workshops can be booked for direct interactions, and full data consistency is maintained with cascading deletions. The platform was developed collaboratively using GitHub workflows.</p><h3>Key Features:</h3><ul><li>Role-based access with OTP authentication</li><li>Inventory and user management</li><li>Workshop booking and custom order modules</li><li>Automated data consistency via cascading deletions</li></ul>",
             "technologies": ["MongoDB", "Express", "JavaScript", "Node.js", "EJS", "GitHub"],
-            "githubUrl": "",
-            "liveUrl": "https://artisanspace.onrender.com/"
+            "githubUrl": "https://github.com/Rithvik086/ArtisanSpace",
+            "liveUrl": "https://artisanspace.lightshadow.tech/"
         },
 
 
@@ -40,40 +40,19 @@
             "liveUrl": ""
         },
 
+        
         {
             "id": 4,
-            "title": "Movie Recommendation App",
-            "date": "2024-05-01",
-            "status": "Completed",
-            "description": "A movie recommendation app that helps users discover trending and popular films.",
-            "content": "<p>This app, developed in Java using Android Studio and Retrofit, integrates with the TMDB API to provide users with popular movie recommendations. The intuitive interface allows users to easily browse trending movies and view detailed information, making it easy to find recommendations when unsure of what to watch.</p><h3>Key Features:</h3><ul><li>Displays popular movies using TMDB API</li><li>Easy-to-navigate interface for quick recommendations</li><li>Detailed movie information for each selection</li><li>Enhanced user experience with smooth browsing</li></ul>",
-            "technologies": ["Java", "Android Studio", "Retrofit", "TMDB API"],
-            "githubUrl": "https://github.com/username/movie-recommendation-app",
-            "liveUrl": "https://movie-rec-demo.com"
-        }
-        ,
-        {
-            "id": 5,
             "title": "Note-Taking App",
             "date": "2024-10-31",
             "status": "Completed",
             "description": "A feature-rich note-taking app built with Kotlin, optimized for performance and user experience.",
             "content": "<p>This note-taking app is developed in Kotlin, featuring a user-friendly interface and efficient data storage using Room Database. The app provides seamless transitions between screens with Jetpack Navigation, focusing on performance and reliability.</p><h3>Key Features:</h3><ul><li>Note creation, editing, and deletion</li><li>Efficient data storage with Room Database</li><li>Smooth navigation using Jetpack Navigation</li><li>Optimized performance and reliability</li></ul>",
             "technologies": ["Kotlin", "Room Database", "Jetpack Navigation"],
-            "githubUrl": "https://github.com/username/note-taking-app",
-            "liveUrl": "https://note-taking-demo.com"
-        },
-        {
-            "id": 6,
-            "title": "Dice Roller App",
-            "date": "2024-02-11",
-            "status": "Completed",
-            "description": "A simple, interactive app for simulating dice rolls.",
-            "content": "Nothing Special About This. It was My first Complete App That solved a Real Life Problem",
-            "technologies": ["Java", "Android Studio"],
-            "githubUrl": "https://github.com/username/dice-roller-app",
-            "liveUrl": "https://dice-roller-demo.com"
+            "githubUrl": "",
+            "liveUrl": ""
         }
+     
         
         
         

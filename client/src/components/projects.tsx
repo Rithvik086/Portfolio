@@ -2,36 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import projectsData from "../data/projects.json";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "CollabSphere",
-      description:
-        "A collaboration platform for developers, designers, and creators to post projects and form teams.",
-      image:
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300",
-      technologies: ["React", "Express", "MongoDB", "JavaScript"],
-      status: "In Development",
-      statusColor: "bg-accent/20 text-accent",
-      liveUrl: null,
-      githubUrl: null,
-      isPrivate: true,
-    },
-    {
-      title: "ArtisanSpace",
-      description:
-        "A full-stack e-commerce platform for handicraft artisans to showcase products and connect with customers.",
-      image:
-        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300",
-      technologies: ["MongoDB", "Express", "JavaScript", "Node.js", "EJS"],
-      status: "Completed",
-      statusColor: "bg-green-500/20 text-green-400",
-      liveUrl: "https://artisanspace.onrender.com/",
-      githubUrl: null,
-      isPrivate: true,
-    },
-  ];
+  // If your JSON is { projects: [...] }, use projectsData.projects
+  const projectsRaw = Array.isArray(projectsData)
+    ? projectsData
+    : projectsData.projects;
+  const projects = projectsRaw.slice(0, 2);
 
   return (
     <section id="projects" className="section-spacing">
@@ -70,7 +48,7 @@ export default function Projects() {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech) => (
+                  {(project.technologies || []).map((tech: string) => (
                     <Badge
                       key={tech}
                       variant="outline"
@@ -104,14 +82,31 @@ export default function Projects() {
                       View Details
                     </Button>
                   )}
-                  <Button
-                    variant="outline"
-                    className="border-border hover:border-accent"
-                    disabled
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    {project.isPrivate ? "Private" : "GitHub"}
-                  </Button>
+                  {project.githubUrl ? (
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-border hover:border-accent"
+                    >
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      className="border-border hover:border-accent"
+                      disabled
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Private
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
