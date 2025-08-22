@@ -1,11 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Blog() {
+  const [, setLocation] = useLocation();
+
   const blogPosts = [
     {
+      id: 1,
       title: "Is India's Home Dominance in Test Fading?",
       excerpt:
         "Exploring recent challenges to India's dominance in home Test cricket and potential future implications.",
@@ -17,6 +21,7 @@ export default function Blog() {
       url: "https://rithvik086.github.io/Portfolio/blog-post.html?id=1",
     },
     {
+      id: 2,
       title: "Is KMP the Next Big Thing in India?",
       excerpt:
         "Analyzing the potential and challenges for Kotlin Multiplatform in India, where it faces stiff competition from Flutter and React Native.",
@@ -82,19 +87,14 @@ export default function Blog() {
                 </div>
 
                 <Button
-                  asChild
                   variant="ghost"
-                  className="p-0 h-auto text-accent hover:text-accent/80"
+                  className="p-0 h-auto text-accent hover:bg-accent hover:text-background px-3 py-1 rounded-md transition-colors duration-200"
+                  onClick={() => setLocation(`/blog/${post.id}`)}
                 >
-                  <a
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center"
-                  >
+                  <span className="inline-flex items-center">
                     Read More
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  </span>
                 </Button>
               </CardContent>
             </Card>
@@ -103,10 +103,10 @@ export default function Blog() {
 
         <div className="text-center mt-12">
           <Button
-            asChild
             className="bg-accent hover:bg-accent/90 px-8 py-3 transform hover:scale-105"
+            onClick={() => setLocation("/blogs")}
           >
-            <a href="/blogs">View All Posts</a>
+            View All Posts
           </Button>
         </div>
       </div>

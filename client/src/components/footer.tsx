@@ -1,38 +1,70 @@
+import { Github, Linkedin, Mail } from "lucide-react";
+import { useLocation } from "wouter";
+
 export default function Footer() {
+  const [, setLocation] = useLocation();
+
   return (
     <footer className="bg-secondary border-t border-border py-8">
       <div className="container-custom">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-muted-foreground">
-              © 2024 <span className="text-accent font-medium">Rithvik Rao</span>. All rights reserved.
+              © 2024{" "}
+              <span className="text-accent font-medium">Rithvik Rao</span>. All
+              rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground mt-1">
+              Built with React, TypeScript & Tailwind CSS
             </p>
           </div>
-          <div className="flex space-x-6">
+
+          <div className="flex items-center space-x-6">
+            {/* Social Links */}
             <a
-              href="https://rithvik086.github.io/Portfolio/"
+              href="https://github.com/Rithvik086"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              aria-label="GitHub"
             >
-              Portfolio
+              <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://rithvik086.github.io/Portfolio/blogs.html"
+              href="https://linkedin.com/in/rithvik-rao"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              aria-label="LinkedIn"
             >
-              Blog
+              <Linkedin className="w-5 h-5" />
             </a>
-            <a
-              href="https://rithvik086.github.io/Portfolio/projects.html"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="text-muted-foreground hover:text-accent transition-colors duration-300"
+              aria-label="Contact"
             >
-              Projects
-            </a>
+              <Mail className="w-5 h-5" />
+            </button>
+
+            {/* Quick Navigation */}
+            <div className="hidden md:flex space-x-4 ml-4 pl-4 border-l border-border">
+              <button
+                onClick={() => setLocation("/projects")}
+                className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => setLocation("/blogs")}
+                className="text-muted-foreground hover:text-accent transition-colors duration-300 text-sm"
+              >
+                Blog
+              </button>
+            </div>
           </div>
         </div>
       </div>

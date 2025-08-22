@@ -6,8 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { BorderBeam } from "./ui/border-beam";
+import { ShineBorder } from "@/components/ui/shine-border";
 import {
   Mail,
   MapPin,
@@ -94,7 +93,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="bg-secondary border-border relative overflow-hidden">
-            
+             <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 
             <CardContent className="p-8 relative z-10">
               <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
