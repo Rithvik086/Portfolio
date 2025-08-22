@@ -1,8 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 
 type Project = {
   id: number;
@@ -19,9 +20,10 @@ type Project = {
 
 export default function AllProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [, setLocation] = useLocation();
 
   useEffect(() => {
-    fetch("/src/data/projects.json")
+    fetch("/projects.json")
       .then((res) => res.json())
       .then((data) => setProjects(data.projects));
   }, []);
@@ -29,7 +31,17 @@ export default function AllProjects() {
   return (
     <section className="section-spacing">
       <div className="container-custom">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-8">All Projects</h2>
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold">All Projects</h2>
+          <Button
+            variant="outline"
+            onClick={() => setLocation("/")}
+            className="flex items-center gap-2 border-border hover:border-accent"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <Card

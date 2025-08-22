@@ -2,14 +2,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
-import projectsData from "../data/projects.json";
+import { useState, useEffect } from "react";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  status: string;
+  statusColor: string;
+  technologies: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+}
 
 export default function Projects() {
-  // If your JSON is { projects: [...] }, use projectsData.projects
-  const projectsRaw = Array.isArray(projectsData)
-    ? projectsData
-    : projectsData.projects;
-  const projects = projectsRaw.slice(0, 2);
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    fetch("/projects.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const projectsRaw = Array.isArray(data) ? data : data.projects;
+        setProjects(projectsRaw.slice(0, 2));
+      })
+      .catch((error) => console.error("Error loading projects:", error));
+  }, []);
 
   return (
     <section id="projects" className="section-spacing">

@@ -3,36 +3,32 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
+import { useState, useEffect } from "react";
+
+interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  image: string;
+  category: string;
+  date: string;
+  tags: string[];
+  url?: string;
+}
 
 export default function Blog() {
   const [, setLocation] = useLocation();
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Is India's Home Dominance in Test Fading?",
-      excerpt:
-        "Exploring recent challenges to India's dominance in home Test cricket and potential future implications.",
-      image:
-        "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300",
-      category: "Sports",
-      date: "October 27, 2024",
-      tags: ["India", "Sports", "Cricket"],
-      url: "https://rithvik086.github.io/Portfolio/blog-post.html?id=1",
-    },
-    {
-      id: 2,
-      title: "Is KMP the Next Big Thing in India?",
-      excerpt:
-        "Analyzing the potential and challenges for Kotlin Multiplatform in India, where it faces stiff competition from Flutter and React Native.",
-      image:
-        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=300",
-      category: "Technology",
-      date: "October 29, 2024",
-      tags: ["Kotlin", "Technology", "Cross-Platform"],
-      url: "https://rithvik086.github.io/Portfolio/blog-post.html?id=2",
-    },
-  ];
+  useEffect(() => {
+    fetch("/blogs.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const blogsRaw = Array.isArray(data) ? data : data.blogs;
+        setBlogPosts(blogsRaw.slice(0, 2));
+      })
+      .catch((error) => console.error("Error loading blogs:", error));
+  }, []);
 
   return (
     <section id="blog" className="section-spacing bg-secondary/50">

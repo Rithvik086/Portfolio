@@ -16,7 +16,7 @@ export default function AllBlogs() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
-    fetch("/src/data/blogs.json")
+    fetch("/blogs.json")
       .then((res) => res.json())
       .then((data) => setBlogPosts(data.posts));
   }, []);

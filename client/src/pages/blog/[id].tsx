@@ -18,7 +18,7 @@ export default function BlogDetail() {
 
   useEffect(() => {
     if (!params) return;
-    fetch("/src/data/blogs.json")
+    fetch("/blogs.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.posts.find(
