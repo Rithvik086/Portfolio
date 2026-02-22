@@ -24,7 +24,7 @@ export default function Blog() {
     fetch("/blogs.json")
       .then((response) => response.json())
       .then((data) => {
-        const blogsRaw = Array.isArray(data) ? data : data.blogs;
+        const blogsRaw = Array.isArray(data) ? data : data.posts;
         setBlogPosts(blogsRaw.slice(0, 2));
       })
       .catch((error) => console.error("Error loading blogs:", error));
@@ -49,11 +49,11 @@ export default function Blog() {
               className="bg-background border-border hover:border-accent/50 transition-all duration-300"
             >
               <CardContent className="p-8">
-                <img
+                {/* <img
                   src={post.image}
                   alt={post.title}
                   className="w-full h-48 object-cover rounded-lg mb-6"
-                />
+                /> */}
 
                 <div className="flex items-center gap-4 mb-4">
                   <Badge className="bg-accent/20 text-accent">

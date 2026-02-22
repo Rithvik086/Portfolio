@@ -56,9 +56,51 @@
       "githubUrl": "https://github.com/Rithvik086/pinak",
       "liveUrl": ""
     },
-
     {
       "id": 4,
+      "title": "Smol.link",
+      "date": "2025-03-23",
+      "status": "Completed",
+      "image": "/projects/smol.png",
+      "description": "A high-performance URL shortener that converts long URLs into compact, shareable links with instant redirection and intelligent caching.",
+      "content": "<p>Smol.link is a lightweight yet powerful URL shortening service designed for speed and reliability. Built with Express.js and TypeScript, it provides a seamless experience for creating and managing short URLs. The application leverages PostgreSQL for persistent data storage, Prisma ORM for type-safe database operations, and Redis Cloud for lightning-fast caching and redirects. The frontend features a responsive, modern design with EJS templates and Tailwind CSS, offering client-side validation and copy-to-clipboard functionality.</p><h3>Key Features:</h3><ul><li>High-performance URL shortening with Base62 encoding</li><li>Intelligent duplicate detection to prevent redundant entries</li><li>Redis-powered caching for instant redirects</li><li>Responsive, modern UI with Tailwind CSS</li><li>AJAX-based shortening without page reloads</li><li>Copy-to-clipboard functionality</li></ul>",
+      "technologies": [
+        "Express.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "Redis",
+        "EJS",
+        "Tailwind CSS"
+      ],
+      "githubUrl": "https://github.com/Rithvik086/smol.link",
+      "liveUrl": "https://smol-link.onrender.com/"
+    },
+    {
+      "id": 4,
+      "title": "Replix",
+      "date": "2026-02-23",
+      "status": "Completed • Inactive",
+      "image": "/projects/Replix.png",
+      "description": "A full-stack WhatsApp automation platform with real-time messaging, intelligent rules engine, and dashboard management. Complete but inactive due to API resource optimization.",
+      "content": "<p>Replix is a comprehensive WhatsApp automation and bot platform that enables users to automate messaging workflows, manage conversations, and apply intelligent rules-based responses. Built with a modern React frontend and a robust Node.js backend, it provides real-time WhatsApp integration with a sleek dashboard for message management and bot configuration.</p><h3>Key Features:</h3><ul><li>Real-time chat dashboard with Socket.IO live updates</li><li>WhatsApp integration via whatsapp-web.js (LocalAuth)</li><li>Persistent message logging with MongoDB</li><li>Intelligent rules engine with LLM fallback support</li><li>QR-based WhatsApp authentication</li><li>Manual message sending and bulk operations</li><li>Customizable bot settings and persona management</li><li>JWT-based authentication and authorization</li><li>Responsive UI for desktop and mobile</li></ul>",
+      "technologies": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "Socket.IO",
+        "whatsapp-web.js",
+        "JWT"
+      ],
+      "githubUrl": "https://github.com/Rithvik086/Replix",
+      "liveUrl": "https://replix-three.vercel.app/"
+    },
+
+    {
+      "id": 5,
       "title": "Note-Taking App",
       "date": "2024-10-31",
       "status": "Completed",
