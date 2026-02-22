@@ -15,7 +15,8 @@ const experiences: Experience[] = [
     company: "Soundverse AI (Remote)",
     position: "Full Stack Engineer Intern",
     duration: "October 2025 – January 2026",
-    description: "At Soundverse AI, I worked as a Full Stack Engineer Intern on a production React application used by 100K+ active users. My role focused on shipping user-facing features, improving performance and stability, and working closely with backend engineers to integrate AI-powered systems in a fast-moving startup environment.",
+    description:
+      "At Soundverse AI, I worked as a Full Stack Engineer Intern on a production React application used by 100K+ active users. My role focused on shipping user-facing features, improving performance and stability, and working closely with backend engineers to integrate AI-powered systems in a fast-moving startup environment.",
     technologies: ["React.js", "Stripe", "APIs", "AI Tools", "Web Performance"],
   },
 ];
@@ -29,7 +30,8 @@ export default function Experience() {
             Work Experience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            My professional journey and the roles I've taken on to build my skills and contribute to projects.
+            My professional journey and the roles I've taken on to build my
+            skills and contribute to projects.
           </p>
         </div>
 
@@ -39,7 +41,9 @@ export default function Experience() {
               <CardHeader>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <CardTitle className="text-xl font-semibold">{exp.position}</CardTitle>
+                    <CardTitle className="text-xl font-semibold">
+                      {exp.position}
+                    </CardTitle>
                     <p className="text-accent font-medium">{exp.company}</p>
                   </div>
                   <Badge variant="secondary" className="mt-2 sm:mt-0">
@@ -49,7 +53,9 @@ export default function Experience() {
               </CardHeader>
               <CardContent>
                 {exp.description && (
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {exp.description}
+                  </p>
                 )}
                 {exp.bulletPoints && (
                   <ul className="text-muted-foreground mb-4 space-y-2">

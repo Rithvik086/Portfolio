@@ -1,48 +1,74 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Coffee,
+  Code2,
+  Zap,
+  Database,
+  Server,
+  GitBranch,
+  Github,
+  Box,
+  Terminal,
+  Mail,
+  Smartphone,
+  Palette,
+  Wind,
+  Flame,
+  HardDrive,
+  Diamond,
+  AtomIcon,
+  Cloud,
+  Settings,
+} from "lucide-react";
 
 export default function Skills() {
   const skillCategories = {
     languages: [
-      { name: "Java", icon: "☕" },
-      { name: "Kotlin", icon: "🤖" },
-      { name: "C", icon: "🔵" },
-      { name: "C++", icon: "➕" },
-      { name: "Python", icon: "🐍" },
-      { name: "JavaScript", icon: "📜" },
-      { name: "SQL", icon: "🗄️" },
+      { name: "Java", icon: Coffee },
+      { name: "Kotlin", icon: Code2 },
+      { name: "C", icon: Terminal },
+      { name: "C++", icon: Code2 },
+      { name: "Python", icon: Code2 },
+      { name: "JavaScript", icon: Zap },
+      { name: "TypeScript", icon: Code2 },
+      { name: "SQL", icon: Database },
     ],
     frontend: [
-      { name: "React", icon: "⚛️" },
-      { name: "HTML5", icon: "🌐" },
-      { name: "CSS3", icon: "🎨" },
-      { name: "Next.js", icon: "⬛" },
-      { name: "Tailwind", icon: "🎯" },
+      { name: "React", icon: AtomIcon },
+      { name: "HTML5", icon: Code2 },
+      { name: "CSS3", icon: Palette },
+      { name: "Next.js", icon: Box },
+      { name: "Tailwind", icon: Wind },
+      { name: "Redux", icon: Settings },
     ],
     backend: [
-      { name: "Node.js", icon: "🟢" },
-      { name: "Express.js", icon: "🚀" },
-      { name: "REST API", icon: "☁️" },
-      { name: "EJS", icon: "📄" },
+      { name: "Node.js", icon: Server },
+      { name: "Express.js", icon: Box },
+      { name: "REST API", icon: Zap },
+      { name: "EJS", icon: Code2 },
     ],
     database: [
-      { name: "MongoDB", icon: "🍃" },
-      { name: "PostgreSQL", icon: "🐘" },
-      { name: "Redis", icon: "📡" },
-      { name: "Firebase", icon: "🔥" },
-      { name: "MySQL", icon: "🐬" },
-      { name: "SQLite3", icon: "💾" },
-      { name: "Prisma", icon: "💎" },
+      { name: "MongoDB", icon: Database },
+      { name: "PostgreSQL", icon: Database },
+      { name: "Redis", icon: Database },
+      { name: "Firebase", icon: Flame },
+      { name: "MySQL", icon: Database },
+      { name: "SQLite3", icon: HardDrive },
+      { name: "Prisma", icon: Diamond },
     ],
     tools: [
-      { name: "Git", icon: "📝" },
-      { name: "GitHub", icon: "🐙" },
-      { name: "Docker", icon: "🐳" },
-      { name: "Terminal", icon: "💻" },
-      { name: "VS Code", icon: "🔧" },
-      { name: "Postman", icon: "📮" },
-      { name: "Android Studio", icon: "📱" },
+      { name: "Git", icon: GitBranch },
+      { name: "GitHub", icon: Github },
+      { name: "Docker", icon: Box },
+      { name: "Terminal", icon: Terminal },
+      { name: "VS Code", icon: Code2 },
+      { name: "Postman", icon: Mail },
+      { name: "Android Studio", icon: Smartphone },
+      { name: "AWS", icon: Cloud },
+      { name: "Render", icon: Cloud },
+      { name: "Vercel", icon: Cloud },
     ],
   };
 
@@ -102,8 +128,10 @@ export default function Skills() {
                       className="bg-background border-border hover:border-accent/50 transition-all duration-300 hover:scale-105"
                     >
                       <CardContent className="p-4 text-center">
-                        <div className="text-3xl mb-3">{skill.icon}</div>
-                        <span className="block font-medium">{skill.name}</span>
+                        <div className="text-accent mb-3 flex justify-center">
+                          <skill.icon size={32} />
+                        </div>
+                        <span className="block font-medium text-sm">{skill.name}</span>
                       </CardContent>
                     </Card>
                   ))}

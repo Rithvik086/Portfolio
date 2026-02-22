@@ -35,15 +35,17 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
-      isScrolled ? "navbar-blur" : "bg-background/95"
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-border transition-all duration-300 ${
+        isScrolled ? "navbar-blur" : "bg-background/95"
+      }`}
+    >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold text-accent">Rithvik Rao</h1>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link) => (
@@ -57,7 +59,7 @@ export default function Navigation() {
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -65,12 +67,16 @@ export default function Navigation() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-foreground hover:text-accent"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-secondary border-t border-border">

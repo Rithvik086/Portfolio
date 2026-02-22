@@ -36,7 +36,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
                 >
-                   Resume
+                  Resume
                 </a>
               </Button>
               <Button
