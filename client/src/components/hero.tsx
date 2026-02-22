@@ -31,11 +31,12 @@ export default function Hero() {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 <a
-                  href="/src/assets/RIthvik_Resume.pdf"
-                  download
+                  href="https://rithvik086.github.io/Resume_Rithvik.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ textDecoration: "none" }}
                 >
-                  Download CV
+                   Resume
                 </a>
               </Button>
               <Button

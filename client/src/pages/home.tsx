@@ -1,15 +1,16 @@
-import Navigation from "@/components/navigation";
-import Hero from "@/components/hero";
-import About from "@/components/about";
-import Education from "@/components/education";
-import Skills from "@/components/skills";
-import Projects from "@/components/projects";
-import Blog from "@/components/blog";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+import React, { Suspense } from "react";
+const Navigation = React.lazy(() => import("@/components/navigation"));
+const Hero = React.lazy(() => import("@/components/hero"));
+const About = React.lazy(() => import("@/components/about"));
+const Education = React.lazy(() => import("@/components/education"));
+const Experience = React.lazy(() => import("@/components/experience"));
+const Skills = React.lazy(() => import("@/components/skills"));
+const Projects = React.lazy(() => import("@/components/projects"));
+const Blog = React.lazy(() => import("@/components/blog"));
+const Contact = React.lazy(() => import("@/components/contact"));
+const Footer = React.lazy(() => import("@/components/footer"));
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
-import FadeInSection from "@/components/FadeInSection"; // 👈 new wrapper
-
+import LazyLoadOnView from "@/components/LazyLoadOnView";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground relative">
@@ -17,32 +18,39 @@ export default function Home() {
         <AnimatedThemeToggler className="w-12 h-12 p-2 rounded-full bg-secondary hover:bg-accent transition-colors shadow-lg cursor-pointer border border-border" />
       </div>
 
-      <Navigation />
+      <Suspense
+        fallback={<div className="w-full text-center py-8">Loading...</div>}
+      >
+        <Navigation />
+      </Suspense>
 
-      <FadeInSection>
+      <LazyLoadOnView>
         <Hero />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <About />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
+        <Experience />
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Education />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Skills />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Projects />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Blog />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Contact />
-      </FadeInSection>
-      <FadeInSection>
+      </LazyLoadOnView>
+      <LazyLoadOnView>
         <Footer />
-      </FadeInSection>
+      </LazyLoadOnView>
     </div>
   );
 }
