@@ -1,60 +1,73 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "title": "ArtisanSpace",
-            "date": "2025-03-01",
-            "status": "Completed",
-            "description": "A full-stack e-commerce platform for handicraft artisans to showcase products and connect with customers.",
-            "content": "<p>ArtisanSpace is an e-commerce platform designed to empower handicraft artisans by giving them a digital storefront. The app includes authentication with OTP-based password resets, role-based access (Admin, Customer, Artisan, Manager), and modules for inventory, user management, and personalized orders. Workshops can be booked for direct interactions, and full data consistency is maintained with cascading deletions. The platform was developed collaboratively using GitHub workflows.</p><h3>Key Features:</h3><ul><li>Role-based access with OTP authentication</li><li>Inventory and user management</li><li>Workshop booking and custom order modules</li><li>Automated data consistency via cascading deletions</li></ul>",
-            "technologies": ["MongoDB", "Express", "JavaScript", "Node.js", "EJS", "GitHub"],
-            "githubUrl": "https://github.com/Rithvik086/ArtisanSpace",
-            "liveUrl": "https://artisanspace.lightshadow.tech/"
-        },
+  "projects": [
+    {
+      "id": 1,
+      "title": "ArtisanSpace",
+      "date": "2025-03-01",
+      "status": "Completed",
+      "image": "/projects/Artisanspace_project.png",
+      "description": "A full-stack e-commerce platform for handicraft artisans to showcase products and connect with customers.",
+      "content": "<p>ArtisanSpace is an e-commerce platform designed to empower handicraft artisans by giving them a digital storefront. The app includes authentication with OTP-based password resets, role-based access (Admin, Customer, Artisan, Manager), and modules for inventory, user management, and personalized orders. Workshops can be booked for direct interactions, and full data consistency is maintained with cascading deletions. The platform was developed collaboratively using GitHub workflows.</p><h3>Key Features:</h3><ul><li>Role-based access with OTP authentication</li><li>Inventory and user management</li><li>Workshop booking and custom order modules</li><li>Automated data consistency via cascading deletions</li></ul>",
+      "technologies": [
+        "MongoDB",
+        "Express",
+        "JavaScript",
+        "Node.js",
+        "EJS",
+        "GitHub"
+      ],
+      "githubUrl": "https://github.com/Rithvik086/ArtisanSpace",
+      "liveUrl": "https://artisanspace.lightshadow.tech/"
+    },
 
+    {
+      "id": 2,
+      "title": "UniVerse App",
+      "date": "2024-10-31",
+      "status": "V1 released",
+      "image": "/projects/UniVerse.png",
+      "description": "An all-in-one platform for IIITS students, providing centralized access to subject materials and reference books.",
+      "content": "<p>UniVerse is an innovative application designed to serve as a central hub for IIITS students, consolidating subject materials, reference books, and additional resources in one convenient location. Built using Kotlin, the app leverages Firebase for real-time data management, ensuring users always have access to the latest materials. The integration of Jetpack libraries enhances the app’s architecture, delivering a responsive and intuitive user experience.</p><h3>Key Features:</h3><ul><li>Unified platform for academic resources</li><li>Real-time data synchronization</li><li>Optimized user experience with Jetpack libraries</li></ul>",
+      "technologies": ["Kotlin", "Firebase", "Jetpack"],
+      "githubUrl": "https://github.com/Rithvik086/UniVerse.git",
+      "liveUrl": "https://github.com/Rithvik086/UniVerse.git"
+    },
 
+    {
+      "id": 3,
+      "title": "Pinak - Beauty E-Commerce Platform",
+      "date": "2026-02-23",
+      "status": "In Development",
+      "image": "/projects/pinak.png",
+      "description": "Pinak is a mobile-first beauty e-commerce platform on React Native where customers discover and purchase curated cosmetics, backed by a scalable full-stack architecture with Node.js API and web app.",
+      "content": "<p>Pinak is a comprehensive beauty e-commerce platform built with modern technologies, focusing on a seamless shopping experience across mobile and web. The project utilizes Turborepo for efficient monorepo management, enabling shared packages for UI components, TypeScript configurations, and ESLint rules across all applications.</p><h3>Tech Stack:</h3><ul><li><strong>Monorepo Management:</strong> Turborepo for optimized build and development workflows</li><li><strong>API:</strong> Node.js with Express, Prisma ORM, PostgreSQL, and Zod validation</li><li><strong>Mobile:</strong> Expo React Native with Expo Router navigation and native feel</li><li><strong>Web:</strong> Vite-based React application</li><li><strong>Language:</strong> TypeScript across all applications</li></ul><h3>Key Features:</h3><ul><li>Product browsing with grid view and filtering</li><li>User authentication and profile management</li><li>Shopping cart and checkout functionality</li><li>Cross-platform consistency with shared UI components</li><li>Rate limiting and security best practices</li><li>PostgreSQL database with Prisma ORM</li><li>Responsive design optimized for mobile devices</li></ul>",
+      "technologies": [
+        "TypeScript",
+        "React Native",
+        "Expo",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "Vite",
+        "React",
+        "Turborepo"
+      ],
+      "githubUrl": "https://github.com/Rithvik086/pinak",
+      "liveUrl": ""
+    },
 
-
-        {
-            "id": 2,
-            "title": "UniVerse App",
-            "date": "2024-10-31",
-            "status": "V1 released",
-            "description": "An all-in-one platform for IIITS students, providing centralized access to subject materials and reference books.",
-            "content": "<p>UniVerse is an innovative application designed to serve as a central hub for IIITS students, consolidating subject materials, reference books, and additional resources in one convenient location. Built using Kotlin, the app leverages Firebase for real-time data management, ensuring users always have access to the latest materials. The integration of Jetpack libraries enhances the app’s architecture, delivering a responsive and intuitive user experience.</p><h3>Key Features:</h3><ul><li>Unified platform for academic resources</li><li>Real-time data synchronization</li><li>Optimized user experience with Jetpack libraries</li></ul>",
-            "technologies": ["Kotlin", "Firebase", "Jetpack"],
-            "githubUrl": "https://github.com/Rithvik086/UniVerse.git",
-            "liveUrl": "https://github.com/Rithvik086/UniVerse.git"
-        },
-        
-        
-        {
-            "id": 3,
-            "title": "CollabSphere",
-            "date": "2025-07-01",
-            "status": "In-progress",
-            "description": "A collaboration platform for developers, designers, and creators to post projects and form teams.",
-            "content": "<p>CollabSphere is a dynamic collaboration platform where users can post projects, define roles (UI/UX, AI, Backend, etc.), set deadlines, and track commitments. It features user profiles showcasing skills, ongoing/completed projects, and availability. Team formation workflows, real-time updates on open roles, and admin dashboards for analytics and moderation are core parts of the system.</p><h3>Key Features:</h3><ul><li>Project postings with defined roles and timelines</li><li>Dynamic user profiles and availability indicators</li><li>Role-based access and admin moderation tools</li><li>Real-time updates and team tracking</li></ul>",
-            "technologies": ["React", "Express", "MongoDB", "JavaScript"],
-            "githubUrl": "",
-            "liveUrl": ""
-        },
-
-        
-        {
-            "id": 4,
-            "title": "Note-Taking App",
-            "date": "2024-10-31",
-            "status": "Completed",
-            "description": "A feature-rich note-taking app built with Kotlin, optimized for performance and user experience.",
-            "content": "<p>This note-taking app is developed in Kotlin, featuring a user-friendly interface and efficient data storage using Room Database. The app provides seamless transitions between screens with Jetpack Navigation, focusing on performance and reliability.</p><h3>Key Features:</h3><ul><li>Note creation, editing, and deletion</li><li>Efficient data storage with Room Database</li><li>Smooth navigation using Jetpack Navigation</li><li>Optimized performance and reliability</li></ul>",
-            "technologies": ["Kotlin", "Room Database", "Jetpack Navigation"],
-            "githubUrl": "",
-            "liveUrl": ""
-        }
-     
-        
-        
-        
-    ]
+    {
+      "id": 4,
+      "title": "Note-Taking App",
+      "date": "2024-10-31",
+      "status": "Completed",
+      "image": "/projects/Notes.png",
+      "description": "A feature-rich note-taking app built with Kotlin, optimized for performance and user experience.",
+      "content": "<p>This note-taking app is developed in Kotlin, featuring a user-friendly interface and efficient data storage using Room Database. The app provides seamless transitions between screens with Jetpack Navigation, focusing on performance and reliability.</p><h3>Key Features:</h3><ul><li>Note creation, editing, and deletion</li><li>Efficient data storage with Room Database</li><li>Smooth navigation using Jetpack Navigation</li><li>Optimized performance and reliability</li></ul>",
+      "technologies": ["Kotlin", "Room Database", "Jetpack Navigation"],
+      "githubUrl": "",
+      "liveUrl": ""
+    }
+  ]
 }

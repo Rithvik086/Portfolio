@@ -131,7 +131,9 @@ export default function Skills() {
                         <div className="text-accent mb-3 flex justify-center">
                           <skill.icon size={32} />
                         </div>
-                        <span className="block font-medium text-sm">{skill.name}</span>
+                        <span className="block font-medium text-sm">
+                          {skill.name}
+                        </span>
                       </CardContent>
                     </Card>
                   ))}
